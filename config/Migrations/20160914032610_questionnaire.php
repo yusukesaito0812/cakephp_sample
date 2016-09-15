@@ -27,11 +27,10 @@ class Questionnaire extends AbstractMigration
      */
     public function change()
     {
-        $table = $this->table('questionnaire');
-        $table->addColumn('title', 'text')
-            ->addColumn('contents', 'text')
-            ->addColumn('created_at', 'datetime', ['null'=>true])
-            ->addColumn('updated_at', 'datetime', ['null'=>true])
-            ->create();
+        
+    }
+    public function down()
+    {
+        
     }
 }

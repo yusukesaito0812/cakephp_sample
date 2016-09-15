@@ -117,4 +117,12 @@ class QuestionnairesController extends AppController
         $this->set(compact('questionnaires'));
         $this->set('_serialize', ['questionnaires']);
     }
+    
+    public function stresscheck()
+    {
+        $questionnaires = $this->paginate($this->Questionnaires);
+
+        $this->set(compact('questionnaires'));
+        $this->set('_serialize', ['questionnaires']);
+    }
 }
