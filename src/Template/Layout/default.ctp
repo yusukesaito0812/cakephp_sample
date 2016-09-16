@@ -47,6 +47,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $this->Html->script('Flat-UI/dist/js/respond.min') ?>
     <![endif]-->
     
+    <!-- Loading ChartJS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.js"></script>
+    
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -54,6 +57,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <div class="row preview-html">
         <div class="col-md-12">
+            <div id="logomenu">
+                <?= $this->Html->image('logo.png') ?>
+            </div>
             <div id="navmenu">
                 <ul>
                     <li class="active"><a href="#" target="_blank"><span><i class="fa fa-fw fa-home"></i> ホーム</span></a></li>

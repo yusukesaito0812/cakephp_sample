@@ -1,0 +1,308 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-09-16 05:30+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/QuestionnairesController.php:55;81
+msgid "The questionnaire has been saved."
+msgstr ""
+
+#: Controller/QuestionnairesController.php:59;85
+msgid "The questionnaire could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/QuestionnairesController.php:104
+msgid "The questionnaire has been deleted."
+msgstr ""
+
+#: Controller/QuestionnairesController.php:106
+msgid "The questionnaire could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:55;81
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:59;85
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:104
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:106
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr ""
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr ""
+
+#: Template/Questionnaires/add.ctp:3
+#: Template/Questionnaires/edit.ctp:3
+#: Template/Questionnaires/index.ctp:3;17
+#: Template/Questionnaires/view.ctp:3
+#: Template/Users/add.ctp:3
+#: Template/Users/edit.ctp:3
+#: Template/Users/index.ctp:3;26
+#: Template/Users/view.ctp:3;100
+msgid "Actions"
+msgstr ""
+
+#: Template/Questionnaires/add.ctp:4
+#: Template/Questionnaires/edit.ctp:10
+#: Template/Questionnaires/view.ctp:6
+msgid "List Questionnaires"
+msgstr ""
+
+#: Template/Questionnaires/add.ctp:10
+msgid "Add Questionnaire"
+msgstr ""
+
+#: Template/Questionnaires/add.ctp:18
+#: Template/Questionnaires/edit.ctp:24
+#: Template/Users/add.ctp:29
+#: Template/Users/edit.ctp:35
+msgid "Submit"
+msgstr ""
+
+#: Template/Questionnaires/edit.ctp:5
+#: Template/Questionnaires/index.ctp:31
+#: Template/Users/edit.ctp:5
+#: Template/Users/index.ctp:47
+#: Template/Users/view.ctp:122
+msgid "Delete"
+msgstr ""
+
+#: Template/Questionnaires/edit.ctp:7
+#: Template/Questionnaires/index.ctp:31
+#: Template/Questionnaires/view.ctp:5
+#: Template/Users/edit.ctp:7
+#: Template/Users/index.ctp:47
+#: Template/Users/view.ctp:5;122
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Questionnaires/edit.ctp:16
+#: Template/Questionnaires/view.ctp:4
+msgid "Edit Questionnaire"
+msgstr ""
+
+#: Template/Questionnaires/index.ctp:4
+#: Template/Questionnaires/view.ctp:7
+msgid "New Questionnaire"
+msgstr ""
+
+#: Template/Questionnaires/index.ctp:8
+msgid "Questionnaires"
+msgstr ""
+
+#: Template/Questionnaires/index.ctp:29
+#: Template/Users/index.ctp:45
+#: Template/Users/view.ctp:120
+msgid "View"
+msgstr ""
+
+#: Template/Questionnaires/index.ctp:30
+#: Template/Users/index.ctp:46
+#: Template/Users/view.ctp:121
+msgid "Edit"
+msgstr ""
+
+#: Template/Questionnaires/index.ctp:39
+#: Template/Users/index.ctp:55
+msgid "previous"
+msgstr ""
+
+#: Template/Questionnaires/index.ctp:41
+#: Template/Users/index.ctp:57
+msgid "next"
+msgstr ""
+
+#: Template/Questionnaires/view.ctp:5
+msgid "Delete Questionnaire"
+msgstr ""
+
+#: Template/Questionnaires/view.ctp:14
+#: Template/Users/view.ctp:16;85
+msgid "Id"
+msgstr ""
+
+#: Template/Questionnaires/view.ctp:18
+msgid "Created At"
+msgstr ""
+
+#: Template/Questionnaires/view.ctp:22
+msgid "Updated At"
+msgstr ""
+
+#: Template/Questionnaires/view.ctp:27
+msgid "Title"
+msgstr ""
+
+#: Template/Questionnaires/view.ctp:31
+msgid "Contents"
+msgstr ""
+
+#: Template/Users/add.ctp:4
+#: Template/Users/edit.ctp:10
+#: Template/Users/view.ctp:6
+msgid "List Users"
+msgstr ""
+
+#: Template/Users/add.ctp:5
+#: Template/Users/edit.ctp:11
+#: Template/Users/index.ctp:5
+#: Template/Users/view.ctp:8
+msgid "List Social Accounts"
+msgstr ""
+
+#: Template/Users/add.ctp:6
+#: Template/Users/edit.ctp:12
+#: Template/Users/index.ctp:6
+#: Template/Users/view.ctp:9
+msgid "New Social Account"
+msgstr ""
+
+#: Template/Users/add.ctp:12
+msgid "Add User"
+msgstr ""
+
+#: Template/Users/edit.ctp:18
+#: Template/Users/view.ctp:4
+msgid "Edit User"
+msgstr ""
+
+#: Template/Users/index.ctp:4
+#: Template/Users/view.ctp:7
+msgid "New User"
+msgstr ""
+
+#: Template/Users/index.ctp:10
+msgid "Users"
+msgstr ""
+
+#: Template/Users/view.ctp:5
+msgid "Delete User"
+msgstr ""
+
+#: Template/Users/view.ctp:20;88
+msgid "Username"
+msgstr ""
+
+#: Template/Users/view.ctp:24
+msgid "Email"
+msgstr ""
+
+#: Template/Users/view.ctp:28
+msgid "Password"
+msgstr ""
+
+#: Template/Users/view.ctp:32
+msgid "First Name"
+msgstr ""
+
+#: Template/Users/view.ctp:36
+msgid "Last Name"
+msgstr ""
+
+#: Template/Users/view.ctp:40;93
+msgid "Token"
+msgstr ""
+
+#: Template/Users/view.ctp:44
+msgid "Api Token"
+msgstr ""
+
+#: Template/Users/view.ctp:48
+msgid "Role"
+msgstr ""
+
+#: Template/Users/view.ctp:52;95
+msgid "Token Expires"
+msgstr ""
+
+#: Template/Users/view.ctp:56
+msgid "Activation Date"
+msgstr ""
+
+#: Template/Users/view.ctp:60
+msgid "Tos Date"
+msgstr ""
+
+#: Template/Users/view.ctp:64;98
+msgid "Created"
+msgstr ""
+
+#: Template/Users/view.ctp:68;99
+msgid "Modified"
+msgstr ""
+
+#: Template/Users/view.ctp:72;96
+msgid "Active"
+msgstr ""
+
+#: Template/Users/view.ctp:73;77
+msgid "Yes"
+msgstr ""
+
+#: Template/Users/view.ctp:73;77
+msgid "No"
+msgstr ""
+
+#: Template/Users/view.ctp:76
+msgid "Is Superuser"
+msgstr ""
+
+#: Template/Users/view.ctp:81
+msgid "Related Social Accounts"
+msgstr ""
+
+#: Template/Users/view.ctp:86
+msgid "User Id"
+msgstr ""
+
+#: Template/Users/view.ctp:87
+msgid "Provider"
+msgstr ""
+
+#: Template/Users/view.ctp:89
+msgid "Reference"
+msgstr ""
+
+#: Template/Users/view.ctp:90
+msgid "Avatar"
+msgstr ""
+
+#: Template/Users/view.ctp:91
+msgid "Description"
+msgstr ""
+
+#: Template/Users/view.ctp:92
+msgid "Link"
+msgstr ""
+
+#: Template/Users/view.ctp:94
+msgid "Token Secret"
+msgstr ""
+
+#: Template/Users/view.ctp:97
+msgid "Data"
+msgstr ""
+

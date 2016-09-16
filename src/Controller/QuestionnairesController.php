@@ -121,8 +121,30 @@ class QuestionnairesController extends AppController
     public function stresscheck()
     {
         $questionnaires = $this->paginate($this->Questionnaires);
-
+        
         $this->set(compact('questionnaires'));
         $this->set('_serialize', ['questionnaires']);
+    }
+    public function score(){
+        //送信されたかチェック
+        if($this->request->data()){
+            $answers = $this->request->data();
+        }else{
+            return $this->redirect('/');
+        }
+        
+        //回答をDBに保存
+        $answers_list=[];
+        $questionnaires_list=[];
+        for($i=1;$i<$answers.length;$i++){
+            
+        }
+        //回答を採点
+        
+        //ChartJS用にデータ集計
+        
+        //画面出力
+        $this->set('answers', $answers);
+        $this->set('_serialize', ['answers']);
     }
 }

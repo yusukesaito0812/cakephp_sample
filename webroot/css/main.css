@@ -34,6 +34,19 @@ body{
 /*
  Header menu 
 */
+
+#logomenu {
+    width: 100%;
+    box-sizing: content-box;
+    background-image: url('../img/header.png');
+}
+
+#logomenu > img{
+    margin:10px 20px;
+    width:160px;
+    height:120px;
+}
+
 #navmenu {
     background: #f96e5b;
     width: auto;
@@ -147,12 +160,71 @@ body{
     text-align: center;
     margin-bottom: 20px;
 }
-.intro > h2{
+
+.notification{
     font-size:30px;
+    border: 3px solid #f96e5b;
+    border-color: #f96e5b;
+    font-weight: normal;
+    line-height: 1.4;
+    border-radius: 4px;
+    padding: 10px 15px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+    transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
 }
 
 .box {
-    background-color: #F7F7F9;
-    border: 2px solid #E1E1E8;
+    background-color: #fff4f2;
+    border: 2px solid #ffded9;
     padding: 15px 21px;
+}
+
+/*
+ Table 
+*/
+
+
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent; 
+}
+thead{
+    background-color: #fcafa5;
+}
+th, td{
+    word-wrap:break-word;
+    max-width: 150px;
+    border-left: 1px solid #ddd; 
+    border-right: 1px solid #ddd; 
+}
+th > a{
+    color:#000;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857;
+    vertical-align: top;
+    border-top: 1px solid #ddd; }
+table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd; }
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+    border-top: 0;
+}
+table > tbody + tbody {
+    border-top: 2px solid #ddd;
 }

@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\I18n\I18n;
 /**
  * Users Controller
  *
@@ -20,6 +20,8 @@ class UsersController extends AppController
     {
         $users = $this->paginate($this->Users);
 
+        I18n::locale('ja');
+        
         $this->set(compact('users'));
         $this->set('_serialize', ['users']);
     }
