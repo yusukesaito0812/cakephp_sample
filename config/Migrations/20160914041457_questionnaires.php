@@ -30,8 +30,8 @@ class Questionnaires extends AbstractMigration
         $table = $this->table('questionnaires');
         $table->addColumn('title', 'text')
             ->addColumn('contents', 'text')
-            ->addColumn('created_at', 'datetime')
-            ->addColumn('updated_at', 'datetime')
+            ->addColumn('created_at', 'datetime', ['null' => true])
+            ->addColumn('updated_at', 'datetime', ['null' => true])
             ->create();
     }
     public function down()

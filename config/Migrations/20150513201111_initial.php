@@ -15,11 +15,8 @@ class Initial extends AbstractMigration
 {
     public function change()
     {
-        $table = $this->table('users', ['id' => false, 'primary_key' => ['id']]);
+        $table = $this->table('users');
         $table
-            ->addColumn('id', 'uuid', [
-                'null' => false,
-            ])
             ->addColumn('username', 'string', [
                 'limit' => 255,
                 'null' => false,
@@ -86,11 +83,8 @@ class Initial extends AbstractMigration
             ])
             ->create();
 
-        $table = $this->table('social_accounts', ['id' => false, 'primary_key' => ['id']]);
+        $table = $this->table('social_accounts');
         $table
-            ->addColumn('id', 'uuid', [
-                'null' => false,
-            ])
             ->addColumn('user_id', 'uuid', [
                 'null' => false,
             ])
@@ -146,7 +140,6 @@ class Initial extends AbstractMigration
             ->addColumn('modified', 'datetime', [
                 'null' => false,
             ])
-            ->addForeignKey('user_id', 'users', 'id', array('delete' => 'CASCADE', 'update' => 'CASCADE'))
             ->create();
     }
     public function down()

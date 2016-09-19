@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Questionnaires Controller
@@ -120,31 +121,45 @@ class QuestionnairesController extends AppController
     
     public function stresscheck()
     {
-        $questionnaires = $this->paginate($this->Questionnaires);
+
+        $questionnaires = $this->Questionnaires->find('all', ['contain' => ['Categories']]);
+        
         
         $this->set(compact('questionnaires'));
         $this->set('_serialize', ['questionnaires']);
     }
     public function score(){
         //送信されたかチェック
-        if($this->request->data()){
-            $answers = $this->request->data();
-        }else{
+        if(!$this->request->data()){
             return $this->redirect('/');
         }
         
-        //回答をDBに保存
-        $answers_list=[];
-        $questionnaires_list=[];
-        for($i=1;$i<$answers.length;$i++){
-            
-        }
+        //データ取得
+        //設問リスト
+        $questionnaire_list=$this->request->data('questionnaire_list');
+        //回答リスト
+        $answer_list=$this->request->data('answer_list');
+        
         //回答を採点
+        //設問のpoint_rate*回答番号を乗算でカテゴリごとに合算
+        //point_listでカテゴリごとの合計点を格納
+        $point_sum = 0;
+        $point_list = [];
+        for($i = 0;$i < sizeof($questionnaire_list);$i++){
+            $questionnaire = TableRegistry::get('questionnaires')->get($questionnaire_list[$i + 1]);
+            $point = $answer_list[$i + 1] * $questionnaire->point_rate;
+            $point_sum += $point;
+            if($i % 10 == 0 && $i !== 0 ){
+                $point_list.push($point_sum);
+                $point_sum = 0;
+            }
+        }
         
         //ChartJS用にデータ集計
         
         //画面出力
-        $this->set('answers', $answers);
-        $this->set('_serialize', ['answers']);
+        $this->set('point_list', $point_list);
+        $this->set('questionnaire_list', $questionnaire_list);
+        $this->set('answer_list', $answer_list);
     }
 }

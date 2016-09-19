@@ -1,7 +1,7 @@
 <?php
 use Migrations\AbstractMigration;
 
-class AddColumnsToAuestionnaires extends AbstractMigration
+class AddColumnsToQuestionnaires extends AbstractMigration
 {
     /**
      * Change Method.

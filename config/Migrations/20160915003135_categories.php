@@ -19,10 +19,10 @@ class Categories extends AbstractMigration
             'null' => false,
         ]);
         $table->addColumn('created_at', 'datetime', [
-            'null' => false,
+            'null' => true,
         ]);
         $table->addColumn('updated_at', 'datetime', [
-            'null' => false,
+            'null' => true,
         ]);
         $table->create();
     }
