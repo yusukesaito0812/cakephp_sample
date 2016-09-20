@@ -17,7 +17,7 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Questionnaire[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\Questionnaire findOrCreate($search, callable $callback = null)
  */
-class QuestionnairesTable extends Table
+class Categories extends Table
 {
 
     /**
@@ -30,14 +30,11 @@ class QuestionnairesTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('questionnaires');
-        $this->displayField('title');
+        $this->table('categories');
+        $this->displayField('name');
         $this->primaryKey('id');
         
-        $this->belongsTo('Categories', [
-            'foreignKey' => 'category_id',
-            'bindingKey' => 'id',
-        ]);
+        
     }
 
     /**
@@ -53,12 +50,8 @@ class QuestionnairesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
-
-        $validator
-            ->requirePresence('contents', 'create')
-            ->notEmpty('contents');
+            ->requirePresence('name', 'create')
+            ->notEmpty('name');
 
         $validator
             ->dateTime('created_at')
@@ -69,11 +62,5 @@ class QuestionnairesTable extends Table
             ->allowEmpty('updated_at');
 
         return $validator;
-    }
-    
-    public function buildRules(RulesChecker $rules)
-    {
-        $rules->add($rules->existsIn(['categories_id'], 'Categories'));
-        return $rules;
     }
 }

@@ -55,8 +55,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <div class="row preview-html">
-        <div class="col-md-12">
+    <div class="preview-html">
             <div id="logomenu">
                 <?= $this->Html->image('logo.png') ?>
             </div>
@@ -68,7 +67,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <li><a href="#"><span><i class="fa fa-fw fa-building"></i> 会社概要</span></a></li>
                 </ul>
             </div>
-        </div>
     </div>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">

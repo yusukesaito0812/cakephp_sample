@@ -4,7 +4,7 @@
             <h2 class="notification">
                 あなたの診断結果は...
             </h2>
-        </div>        
+        </div>
         <div class="columns col-md-7">
             <canvas id="radarChart" width="600" height="400"></canvas>
                 <script>
@@ -21,7 +21,7 @@
                             pointHoverBackgroundColor: "#fff",
                             pointHoverBorderColor: "rgba(179,181,198,1)",
                             //データの値
-                            data: [3, 5, 1, 4, 5, 5, 2]
+                            data: <?php echo '['.implode(",", h($point_list) )."]"; ?>
                         }
                     ]
                 };

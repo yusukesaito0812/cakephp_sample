@@ -20,7 +20,6 @@ class UsersSeed extends AbstractSeed
     {
         $data = array(
             array(
-            'id' => '9385007c-1af6-4d1b-9ef5-34786d28feeb',
             'username' => 'yusuke',
             'email' => 'yusuke.saito@axis-ing.com',
             'password' => '$2y$10$q91A1vaxcDfwuqwPHU1uYesVneFix9A2FTC4slzBu4nRYaLO4kaAe',

@@ -12,9 +12,16 @@ and open the template in the editor.
 /*
  Common CSS 
 */
-body{
+html,body{
+    height:100%;
+    background-color: #F5F6FA!important;
     font-family: Lato, Helvetica, Arial, sans-serif;
-    background: #F5F6FA;
+}
+.container{
+    position: relative; 
+    min-height: 100%;
+    height: auto !important;
+    height: 100%
 }
 
 .left {
@@ -28,7 +35,7 @@ body{
     font-size: 0;
     line-height: 0;
     border: none;
-    background: none;
+    background-color: none;
 }
 
 /*
@@ -48,7 +55,7 @@ body{
 }
 
 #navmenu {
-    background: #f96e5b;
+    background-color: #f96e5b;
     width: auto;
     box-sizing: content-box;
 }
@@ -97,7 +104,7 @@ body{
     bottom: 0;
     height: 3px;
     width: 0;
-    background: #333;
+    background-color: #333;
     -webkit-transition: width .25s;
     -moz-transition: width .25s;
     -ms-transition: width .25s;
@@ -112,7 +119,7 @@ body{
     top: 19px;
     height: 6px;
     width: 6px;
-    background: #fff;
+    background-color: #fff;
     opacity: .5;
 }
 
@@ -130,7 +137,7 @@ body{
     font-size: 12px;
     width: 100%;
     text-transform: uppercase;
-    background: #f96e5b;
+    background-color: #f96e5b;
     line-height: 20px;
 }
 .inner-footer {
