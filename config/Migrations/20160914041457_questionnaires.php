@@ -28,8 +28,7 @@ class Questionnaires extends AbstractMigration
     public function change()
     {
         $table = $this->table('questionnaires');
-        $table->addColumn('title', 'text')
-            ->addColumn('contents', 'text')
+        $table->addColumn('contents', 'string')
             ->addColumn('created_at', 'datetime', ['null' => true])
             ->addColumn('updated_at', 'datetime', ['null' => true])
             ->create();

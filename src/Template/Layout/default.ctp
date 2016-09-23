@@ -61,9 +61,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
             <div id="navmenu">
                 <ul>
-                    <li class="active"><a href="#" target="_blank"><span><i class="fa fa-fw fa-home"></i> ホーム</span></a></li>
+                    <li class="active"><a href="/"><span><i class="fa fa-fw fa-home"></i> ホーム</span></a></li>
                     <li><a href="#"><span><i class="fa fa-fw fa-heart"></i> ストレスチェック</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-fw fa-user"></i> プロフィール</span></a></li>
+                    <li><a href="#"><span><i class="fa fa-fw fa-user"></i> マイページ</span></a></li>
                     <li><a href="#"><span><i class="fa fa-fw fa-building"></i> 会社概要</span></a></li>
                 </ul>
             </div>

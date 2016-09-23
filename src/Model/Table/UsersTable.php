@@ -54,7 +54,6 @@ class UsersTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->uuid('id')
             ->allowEmpty('id', 'create');
 
         $validator

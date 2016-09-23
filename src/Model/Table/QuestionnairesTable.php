@@ -31,7 +31,7 @@ class QuestionnairesTable extends Table
         parent::initialize($config);
 
         $this->table('questionnaires');
-        $this->displayField('title');
+        $this->displayField('contents');
         $this->primaryKey('id');
         
         $this->belongsTo('Categories', [
@@ -49,13 +49,8 @@ class QuestionnairesTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
             ->allowEmpty('id', 'create');
-
-        $validator
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
-
+        
         $validator
             ->requirePresence('contents', 'create')
             ->notEmpty('contents');
@@ -73,7 +68,7 @@ class QuestionnairesTable extends Table
     
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['categories_id'], 'Categories'));
+        $rules->add($rules->existsIn(['category_id'], 'Categories'));
         return $rules;
     }
 }

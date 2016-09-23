@@ -23,6 +23,7 @@ class AddColumnsToQuestionnaires extends AbstractMigration
         $table->addColumn('is_show', 'boolean', [
             'null' => false,
         ]);
+        $table->addForeignKey('category_id', 'categories', 'id');
         $table->update();
     }
     public function down()

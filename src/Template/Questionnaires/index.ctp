@@ -1,17 +1,17 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="col-md-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Questionnaire'), ['action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="questionnaires index large-9 medium-8 columns content">
+<div class="questionnaires index col-md-10 columns content">
     <h3><?= __('Questionnaires') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('contents') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('category') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created_at') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('updated_at') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -21,8 +21,8 @@
             <?php foreach ($questionnaires as $questionnaire): ?>
             <tr>
                 <td><?= $this->Number->format($questionnaire->id) ?></td>
-                <td><?= h($questionnaire->title) ?></td>
                 <td><?= h($questionnaire->contents) ?></td>
+                <td><?= h($questionnaire->category->name) ?></td>
                 <td><?= h($questionnaire->created_at) ?></td>
                 <td><?= h($questionnaire->updated_at) ?></td>
                 <td class="actions">

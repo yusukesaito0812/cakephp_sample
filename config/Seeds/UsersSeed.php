@@ -35,6 +35,23 @@ class UsersSeed extends AbstractSeed
             'role' => 'user',
             'created' => '2016-09-15 02:56:19',
             'modified' => '2016-09-15 02:56:19',
+            ),
+            array(
+            'username' => 'admin',
+            'email' => 'admin@axis-ing.com',
+            'password' => '$2y$10$q91A1vaxcDfwuqwPHU1uYesVneFix9A2FTC4slzBu4nRYaLO4kaAe',
+            'first_name' => 'admin',
+            'last_name' => 'admin',
+            'token' => 'a8a1c16a964446a4a88e0e5b646565b1',
+            'token_expires' => '2016-09-15 02:56:19',
+            'api_token' => 'NULL',
+            'activation_date' => '2016-09-15 02:56:20',
+            'tos_date' => '2016-09-15 01:56:19',
+            'active' => '1',
+            'is_superuser' => '1',
+            'role' => 'admin',
+            'created' => '2016-09-15 02:56:19',
+            'modified' => '2016-09-15 02:56:19',
             )
         );
 

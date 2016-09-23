@@ -170,7 +170,7 @@ html,body{
 
 .notification{
     font-size:30px;
-    border: 3px solid #f96e5b;
+    border-bottom: 3px solid #f96e5b;
     border-color: #f96e5b;
     font-weight: normal;
     line-height: 1.4;
@@ -187,11 +187,39 @@ html,body{
     padding: 15px 21px;
 }
 
+.category_header{
+    background-color: #f96e5b;
+    color:#fff;
+}
+.category_header > th > h3{
+    margin:15px 0;
+    padding-left:15px;
+} 
+.questionnaire_row{
+    background-color: #fef7f6;
+}
+.questionnaire_row > th, .category_header > th {
+    width:60%;
+    padding-left:15px;
+    vertical-align: middle;
+}
+.questionnaire_row > td, .category_header > td {
+    width:10%;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.questionnaire_row > th > p{
+    margin-bottom: 0px;
+}
+
+.radio{
+    margin:35%;
+}
+
 /*
  Table 
 */
-
-
 
 table {
     width: 100%;
@@ -217,7 +245,7 @@ table > tbody > tr > th,
 table > tbody > tr > td,
 table > tfoot > tr > th,
 table > tfoot > tr > td {
-    padding: 8px;
+    padding: 4px;
     line-height: 1.42857;
     vertical-align: top;
     border-top: 1px solid #ddd; }

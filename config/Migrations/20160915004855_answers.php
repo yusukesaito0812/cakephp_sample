@@ -13,7 +13,7 @@ class Answers extends AbstractMigration
     public function change()
     {
         $table = $this->table('answers');
-        $table->addColumn('user_id', 'string', [
+        $table->addColumn('user_id', 'integer', [
             'null' => false,
         ]);
         $table->addColumn('questionnaires_list', 'string', [
@@ -30,6 +30,7 @@ class Answers extends AbstractMigration
         $table->addColumn('updated_at', 'datetime', [
             'null' => true,
         ]);
+        $table->addForeignKey('user_id', 'users', 'id');
         $table->create();
     }
     public function down()

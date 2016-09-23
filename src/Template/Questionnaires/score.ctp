@@ -21,7 +21,7 @@
                             pointHoverBackgroundColor: "#fff",
                             pointHoverBorderColor: "rgba(179,181,198,1)",
                             //データの値
-                            data: <?php echo '['.implode(",", h($point_list) )."]"; ?>
+                            data:<?php echo '['.implode(",", h($point_list) )."]"; ?>
                         }
                     ]
                 };

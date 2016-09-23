@@ -19,7 +19,7 @@ class QuestionnairesController extends AppController
      */
     public function index()
     {
-        $questionnaires = $this->paginate($this->Questionnaires);
+        $questionnaires = $this->paginate($this->Questionnaires->find('all', ['contain' => ['Categories']]));
 
         $this->set(compact('questionnaires'));
         $this->set('_serialize', ['questionnaires']);
@@ -35,7 +35,7 @@ class QuestionnairesController extends AppController
     public function view($id = null)
     {
         $questionnaire = $this->Questionnaires->get($id, [
-            'contain' => []
+            'contain' => ['Categories']
         ]);
 
         $this->set('questionnaire', $questionnaire);
@@ -49,6 +49,13 @@ class QuestionnairesController extends AppController
      */
     public function add()
     {
+        $categoriesTable = TableRegistry::get('categories');
+        $categories = $categoriesTable->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'name'
+        ]);
+        $this->set(compact('categories'));
+        $this->set('_serialize', ['categories']);
         $questionnaire = $this->Questionnaires->newEntity();
         if ($this->request->is('post')) {
             $questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
@@ -74,7 +81,7 @@ class QuestionnairesController extends AppController
     public function edit($id = null)
     {
         $questionnaire = $this->Questionnaires->get($id, [
-            'contain' => []
+            'contain' => ['Categories']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
@@ -133,7 +140,7 @@ class QuestionnairesController extends AppController
         if(!$this->request->data()){
             return $this->redirect('/');
         }
-        
+        $loggedUserId = $this->Auth->user('id');
         //データ取得
         //設問リスト
         $questionnaire_list=$this->request->data('questionnaire_list');
@@ -150,12 +157,19 @@ class QuestionnairesController extends AppController
             $point = $answer_list[$i + 1] * $questionnaire->point_rate;
             $point_sum += $point;
             if($i % 10 == 0 && $i !== 0 ){
-                $point_list.push($point_sum);
+                array_push($point_list, $point_sum);
                 $point_sum = 0;
             }
         }
-        
-        //ChartJS用にデータ集計
+        //回答データ保存
+        $answersTable = TableRegistry::get('answers');
+        $answers = $answersTable->newEntity();
+
+        $answers->id = $loggedUserId;
+        $answers->questionnaires_list = serialize($questionnaire_list);
+        $answers->answers_list = serialize($answer_list);
+
+        $answersTable->save($answers);
         
         //画面出力
         $this->set('point_list', $point_list);
