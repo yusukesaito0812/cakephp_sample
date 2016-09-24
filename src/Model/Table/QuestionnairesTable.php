@@ -5,6 +5,7 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use SoftDelete\Model\Table\SoftDeleteTrait;
 
 /**
  * Questionnaires Model
@@ -19,6 +20,8 @@ use Cake\Validation\Validator;
  */
 class QuestionnairesTable extends Table
 {
+    use SoftDeleteTrait;
+    protected $softDeleteField = 'deleted';
 
     /**
      * Initialize method
@@ -33,6 +36,15 @@ class QuestionnairesTable extends Table
         $this->table('questionnaires');
         $this->displayField('contents');
         $this->primaryKey('id');
+        
+        $this->addBehavior('Timestamp', [
+            'events' => [
+                'Model.beforeSave' => [
+                    'created_at' => 'new',
+                    'updated_at' => 'always',
+                ]
+            ]
+        ]);
         
         $this->belongsTo('Categories', [
             'foreignKey' => 'category_id',
@@ -56,12 +68,13 @@ class QuestionnairesTable extends Table
             ->notEmpty('contents');
 
         $validator
-            ->dateTime('created_at')
-            ->allowEmpty('created_at');
+            ->dateTime('created_at');
 
         $validator
-            ->dateTime('updated_at')
-            ->allowEmpty('updated_at');
+            ->dateTime('updated_at');
+        
+        $validator
+            ->notEmpty('is_show');
 
         return $validator;
     }

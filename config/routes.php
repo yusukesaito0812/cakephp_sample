@@ -56,7 +56,20 @@ Router::scope(
 
 Router::scope(
     '/users',
-    ['controller' => 'Users'],
+    ['plugin' => 'CakeDC/Users','controller' => 'Users'],
+        //viewはvendor/cakedc以下のフォルダに入っています
+    function (RouteBuilder $routes) {
+        $routes->connect('/add/*', ['action' => 'add']);
+        $routes->connect('/view/*', ['action' => 'view']);
+        $routes->connect('/edit/*', ['action' => 'edit']);
+        $routes->connect('/delete/*', ['action' => 'delete']);
+        $routes->connect('/*', ['action' => 'index']);
+    }
+);
+
+Router::scope(
+    '/categories',
+    ['controller' => 'Categories'],
     function (RouteBuilder $routes) {
         $routes->connect('/add/*', ['action' => 'add']);
         $routes->connect('/view/*', ['action' => 'view']);
@@ -65,6 +78,14 @@ Router::scope(
     }
 );
 
+Router::scope(
+    '/pages',
+    ['controller' => 'Pages'],
+    function (RouteBuilder $routes) {
+        $routes->connect('/company/*', ['action' => 'company']);
+        $routes->connect('/*', ['action' => 'display']);
+    }
+);
 Router::scope('/', function (RouteBuilder $routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
@@ -78,7 +99,6 @@ Router::scope('/', function (RouteBuilder $routes) {
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
     /**
      * Connect catchall routes for all controllers.

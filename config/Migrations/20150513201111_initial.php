@@ -40,6 +40,18 @@ class Initial extends AbstractMigration
                 'limit' => 50,
                 'null' => true,
             ])
+            ->addColumn('hospital', 'string', [
+            'null' => false,
+            ])
+            ->addColumn('ward', 'string', [
+            'null' => true,
+            ])
+            ->addColumn('section', 'string', [
+            'null' => true,
+            ])
+            ->addColumn('occupation', 'string', [
+            'null' => true,
+            ])
             ->addColumn('token', 'string', [
                 'default' => null,
                 'limit' => 255,
@@ -76,10 +88,16 @@ class Initial extends AbstractMigration
                 'null' => true,
             ])
             ->addColumn('created', 'datetime', [
-                'null' => false,
+                'default' => null,
+                'null' => true,
             ])
             ->addColumn('modified', 'datetime', [
-                'null' => false,
+                'default' => null,
+                'null' => true,
+            ])
+            ->addColumn('deleted', 'datetime', [
+                'default' => null,
+                'null' => true,
             ])
             ->create();
 

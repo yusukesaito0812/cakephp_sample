@@ -5,25 +5,22 @@ use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
-use SoftDelete\Model\Table\SoftDeleteTrait;
 
 /**
- * Answers Model
+ * Profiles Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Users
  *
- * @method \App\Model\Entity\Answer get($primaryKey, $options = [])
- * @method \App\Model\Entity\Answer newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\Answer[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\Answer|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Answer patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\Answer[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\Answer findOrCreate($search, callable $callback = null)
+ * @method \App\Model\Entity\Profile get($primaryKey, $options = [])
+ * @method \App\Model\Entity\Profile newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\Profile[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\Profile|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Profile patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\Profile[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Profile findOrCreate($search, callable $callback = null)
  */
-class AnswersTable extends Table
+class ProfilesTable extends Table
 {
-    use SoftDeleteTrait;
-    protected $softDeleteField = 'deleted';
 
     /**
      * Initialize method
@@ -35,13 +32,12 @@ class AnswersTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('answers');
+        $this->table('profiles');
         $this->displayField('id');
         $this->primaryKey('id');
 
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
-            'joinType' => 'INNER'
         ]);
     }
 
@@ -58,20 +54,14 @@ class AnswersTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('questionnaires_list', 'create')
-            ->notEmpty('questionnaires_list');
+            ->requirePresence('hospital', 'create')
+            ->notEmpty('hospital');
 
         $validator
-            ->requirePresence('answers_list', 'create')
-            ->notEmpty('answers_list');
+            ->allowEmpty('ward');
 
         $validator
-            ->dateTime('created_at')
-            ->allowEmpty('created_at');
-
-        $validator
-            ->dateTime('updated_at')
-            ->allowEmpty('updated_at');
+            ->allowEmpty('occupation');
 
         return $validator;
     }

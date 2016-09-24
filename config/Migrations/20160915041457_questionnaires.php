@@ -29,8 +29,30 @@ class Questionnaires extends AbstractMigration
     {
         $table = $this->table('questionnaires');
         $table->addColumn('contents', 'string')
-            ->addColumn('created_at', 'datetime', ['null' => true])
-            ->addColumn('updated_at', 'datetime', ['null' => true])
+            ->addColumn('point_rate', 'float', [
+                'default' => 1,
+                'null' => false,
+            ])
+            ->addColumn('category_id', 'integer', [
+                'null' => false,
+            ])
+            ->addColumn('is_show', 'boolean', [
+                'default' => true,
+                'null' => false,
+            ])
+            ->addColumn('created_at', 'datetime', [
+                'default' => null,
+                'null' => true,
+            ])
+            ->addColumn('updated_at', 'datetime', [
+                'default' => null,
+                'null' => true,
+            ])
+            ->addColumn('deleted', 'datetime', [
+                'default' => null,
+                'null' => true,
+            ])
+            ->addForeignKey('category_id', 'categories', 'id')
             ->create();
     }
     public function down()

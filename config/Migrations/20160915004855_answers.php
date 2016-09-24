@@ -15,23 +15,29 @@ class Answers extends AbstractMigration
         $table = $this->table('answers');
         $table->addColumn('user_id', 'integer', [
             'null' => false,
-        ]);
-        $table->addColumn('questionnaires_list', 'string', [
+        ])
+        ->addColumn('questionnaires_list', 'string', [
             'default' => '[]',
             'null' => false,
-        ]);
-        $table->addColumn('answers_list', 'string', [
+        ])
+        ->addColumn('answers_list', 'string', [
             'default' => '[]',
             'null' => false,
-        ]);
-        $table->addColumn('created_at', 'datetime', [
+        ])
+        ->addColumn('created_at', 'datetime', [
+            'default' => null,
             'null' => true,
-        ]);
-        $table->addColumn('updated_at', 'datetime', [
+            ])
+        ->addColumn('updated_at', 'datetime', [
+            'default' => null,
             'null' => true,
-        ]);
-        $table->addForeignKey('user_id', 'users', 'id');
-        $table->create();
+            ])
+        ->addColumn('deleted', 'datetime', [
+            'default' => null,
+            'null' => true,
+        ])
+        ->addForeignKey('user_id', 'users', 'id')
+        ->create();
     }
     public function down()
     {

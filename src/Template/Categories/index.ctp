@@ -8,18 +8,16 @@
     </ul>
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Questionnaire'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('New Category'), ['action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="questionnaires index col-md-10 columns content">
-    <h3><?= __('Questionnaires') ?></h3>
+<div class="categories form col-md-10 columns content">
+    <h3><?= __('Categories') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('contents') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('category') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('point_rate') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('is_show') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created_at') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('updated_at') ?></th>
@@ -27,19 +25,17 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($questionnaires as $questionnaire): ?>
+            <?php foreach ($categories as $category): ?>
             <tr>
-                <td><?= $this->Number->format($questionnaire->id) ?></td>
-                <td><?= h($questionnaire->contents) ?></td>
-                <td><?= h($questionnaire->category->name) ?></td>
-                <td><?= h($questionnaire->point_rate) ?></td>
-                <td><?= h($questionnaire->is_show) ?></td>
-                <td><?= h($questionnaire->created_at) ?></td>
-                <td><?= h($questionnaire->updated_at) ?></td>
+                <td><?= $this->Number->format($category->id) ?></td>
+                <td><?= h($category->name) ?></td>
+                <td><?= h($category->is_show) ?></td>
+                <td><?= h($category->created_at) ?></td>
+                <td><?= h($category->updated_at) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $questionnaire->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $questionnaire->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $questionnaire->id], ['confirm' => __('Are you sure you want to delete # {0}?', $questionnaire->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $category->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $category->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $category->id], ['confirm' => __('Are you sure you want to delete # {0}?', $category->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

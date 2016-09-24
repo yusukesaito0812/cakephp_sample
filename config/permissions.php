@@ -73,12 +73,18 @@ return [
         [
             'role' => ['user'],
             'controller' => ['Pages'],
-            'action' => ['other', 'display'],
+            'action' => ['other', 'display','company'],
             'allowed' => true,
         ],
         [
             'role' => ['user'],
             'controller' => ['Questionnaires'],
+            'action' => '*',
+            'allowed' => true,
+        ],
+        [
+            'role' => ['user'],
+            'controller' => ['Categories'],
             'action' => '*',
             'allowed' => true,
         ],

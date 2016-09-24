@@ -17,14 +17,24 @@ class Categories extends AbstractMigration
             'default' => null,
             'limit' => 255,
             'null' => false,
-        ]);
-        $table->addColumn('created_at', 'datetime', [
+        ])
+            ->addColumn('is_show', 'boolean', [
+                'default' => true,
+                'null' => false,
+            ])
+        ->addColumn('created_at', 'datetime', [
+            'default' => null,
             'null' => true,
-        ]);
-        $table->addColumn('updated_at', 'datetime', [
+            ])
+        ->addColumn('updated_at', 'datetime', [
+            'default' => null,
             'null' => true,
-        ]);
-        $table->create();
+            ])
+        ->addColumn('deleted', 'datetime', [
+            'default' => null,
+            'null' => true,
+        ])
+        ->create();
     }
     public function down()
     {

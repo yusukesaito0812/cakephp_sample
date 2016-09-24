@@ -49,13 +49,6 @@ class QuestionnairesController extends AppController
      */
     public function add()
     {
-        $categoriesTable = TableRegistry::get('categories');
-        $categories = $categoriesTable->find('list', [
-            'keyField' => 'id',
-            'valueField' => 'name'
-        ]);
-        $this->set(compact('categories'));
-        $this->set('_serialize', ['categories']);
         $questionnaire = $this->Questionnaires->newEntity();
         if ($this->request->is('post')) {
             $questionnaire = $this->Questionnaires->patchEntity($questionnaire, $this->request->data);
@@ -69,6 +62,13 @@ class QuestionnairesController extends AppController
         }
         $this->set(compact('questionnaire'));
         $this->set('_serialize', ['questionnaire']);
+        $categoriesTable = TableRegistry::get('categories');
+        $categories = $categoriesTable->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'name'
+        ]);
+        $this->set(compact('categories'));
+        $this->set('_serialize', ['categories']);
     }
 
     /**
@@ -95,6 +95,11 @@ class QuestionnairesController extends AppController
         }
         $this->set(compact('questionnaire'));
         $this->set('_serialize', ['questionnaire']);
+        $categories = $this->Questionnaires->Categories->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'name'
+        ]);
+        $this->set('categories', $categories);
     }
 
     /**

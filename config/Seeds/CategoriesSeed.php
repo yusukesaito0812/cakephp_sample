@@ -21,24 +21,31 @@ class CategoriesSeed extends AbstractSeed
         $data = array(
           array(
               'name'    => '仕事の意欲',
+              'is_show'    => 1,
           ),
           array(
               'name'    => '成長の機会',
+              'is_show'    => 1,
           ),
           array(
               'name'    => '仕事のコントロール',
+              'is_show'    => 1,
           ),
           array(
               'name'    => '仕事の適性',
+              'is_show'    => 1,
           ),
           array(
               'name'    => '技能の活用度',
+              'is_show'    => 1,
           ),
           array(
               'name'    => '役割の明確さ',
+              'is_show'    => 1,
           ),
           array(
               'name'    => '上司の公正な態度',
+              'is_show'    => 1,
           ),
         );
 

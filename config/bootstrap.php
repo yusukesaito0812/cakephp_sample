@@ -224,3 +224,4 @@ if (Configure::read('debug')) {
 
 Plugin::load('Migrations');
 Plugin::load('CakeDC/Users', ['routes' => true, 'bootstrap' => true]);
+Plugin::load('SoftDelete');

@@ -61,10 +61,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </div>
             <div id="navmenu">
                 <ul>
-                    <li class="active"><a href="/"><span><i class="fa fa-fw fa-home"></i> ホーム</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-fw fa-heart"></i> ストレスチェック</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-fw fa-user"></i> マイページ</span></a></li>
-                    <li><a href="#"><span><i class="fa fa-fw fa-building"></i> 会社概要</span></a></li>
+                    <li><a href="/"><span><i class="fa fa-fw fa-home"></i> ホーム</span></a></li>
+                    <li><a href="/"><span><i class="fa fa-fw fa-heart"></i> ストレスチェック</span></a></li>
+                    <li><a href="/pages/company"><span><i class="fa fa-fw fa-building"></i> 会社概要</span></a></li>
+                    <?php if(
+                        $this->request->session()->read('Auth.User.role')=='user' ||
+                        $this->request->session()->read('Auth.User.role')=='admin'
+                        ){ ?>
+                        <li><a href="/profile"><span><i class="fa fa-fw fa-user"></i> マイページ</span></a></li>
+                        <li><a href="/logout"><span><i class="fa fa-sign-out"></i> ログアウト</span></a></li>
+                    <?php } ?> 
+                    <?php if($this->request->session()->read('Auth.User.role')=='admin'){ ?>
+                        <li><a href="/users"><span><i class="fa fa-lock" aria-hidden="true"></i> 管理者</span></a></li>
+                    <?php } ?>
                 </ul>
             </div>
     </div>
