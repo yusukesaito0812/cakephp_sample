@@ -1,4 +1,5 @@
 /vendor/*
+!/vendor/cakedc/*
 /config/app.php
 /tmp/*
 /logs/*
