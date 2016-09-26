@@ -57,6 +57,9 @@ class UsersTable extends Table
             'foreignKey' => 'user_id',
             'className' => 'CakeDC/Users.SocialAccounts'
         ]);
+        $this->hasMany('Answers', [
+            'foreignKey' => 'user_id',
+        ]);
         
     }
 

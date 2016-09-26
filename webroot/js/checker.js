@@ -1,0 +1,70 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+$(function(){
+    $(".checker").click(function(){
+$('input[name="answer_list[1]"]').val(['1']);
+$('input[name="answer_list[2]"]').val(['2']);
+$('input[name="answer_list[3]"]').val(['3']);
+$('input[name="answer_list[4]"]').val(['4']);
+$('input[name="answer_list[5]"]').val(['1']);
+$('input[name="answer_list[6]"]').val(['2']);
+$('input[name="answer_list[7]"]').val(['3']);
+$('input[name="answer_list[8]"]').val(['4']);
+$('input[name="answer_list[9]"]').val(['1']);
+$('input[name="answer_list[10]"]').val(['2']);
+$('input[name="answer_list[11]"]').val(['3']);
+$('input[name="answer_list[12]"]').val(['4']);
+$('input[name="answer_list[13]"]').val(['1']);
+$('input[name="answer_list[14]"]').val(['2']);
+$('input[name="answer_list[15]"]').val(['3']);
+$('input[name="answer_list[16]"]').val(['4']);
+$('input[name="answer_list[17]"]').val(['1']);
+$('input[name="answer_list[18]"]').val(['2']);
+$('input[name="answer_list[19]"]').val(['3']);
+$('input[name="answer_list[20]"]').val(['4']);
+$('input[name="answer_list[21]"]').val(['1']);
+$('input[name="answer_list[22]"]').val(['2']);
+$('input[name="answer_list[23]"]').val(['3']);
+$('input[name="answer_list[24]"]').val(['4']);
+$('input[name="answer_list[25]"]').val(['1']);
+$('input[name="answer_list[26]"]').val(['2']);
+$('input[name="answer_list[27]"]').val(['3']);
+$('input[name="answer_list[28]"]').val(['4']);
+$('input[name="answer_list[29]"]').val(['1']);
+$('input[name="answer_list[30]"]').val(['2']);
+$('input[name="answer_list[31]"]').val(['3']);
+$('input[name="answer_list[32]"]').val(['4']);
+$('input[name="answer_list[33]"]').val(['1']);
+$('input[name="answer_list[34]"]').val(['2']);
+$('input[name="answer_list[35]"]').val(['3']);
+$('input[name="answer_list[36]"]').val(['4']);
+$('input[name="answer_list[37]"]').val(['1']);
+$('input[name="answer_list[38]"]').val(['2']);
+$('input[name="answer_list[39]"]').val(['3']);
+$('input[name="answer_list[40]"]').val(['4']);
+$('input[name="answer_list[41]"]').val(['1']);
+$('input[name="answer_list[42]"]').val(['2']);
+$('input[name="answer_list[43]"]').val(['3']);
+$('input[name="answer_list[44]"]').val(['4']);
+$('input[name="answer_list[45]"]').val(['1']);
+$('input[name="answer_list[46]"]').val(['2']);
+$('input[name="answer_list[47]"]').val(['3']);
+$('input[name="answer_list[48]"]').val(['4']);
+$('input[name="answer_list[49]"]').val(['1']);
+$('input[name="answer_list[50]"]').val(['2']);
+$('input[name="answer_list[51]"]').val(['3']);
+$('input[name="answer_list[52]"]').val(['4']);
+$('input[name="answer_list[53]"]').val(['1']);
+$('input[name="answer_list[54]"]').val(['2']);
+$('input[name="answer_list[55]"]').val(['3']);
+$('input[name="answer_list[56]"]').val(['4']);
+$('input[name="answer_list[57]"]').val(['1']);
+$('input[name="answer_list[58]"]').val(['2']);
+$('input[name="answer_list[59]"]').val(['3']);
+$('input[name="answer_list[60]"]').val(['4']);
+
+    });
+});

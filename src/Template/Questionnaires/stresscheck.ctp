@@ -61,6 +61,8 @@
                 </table>
                 <div class="columns col-md-12 submit_form">
                     <button type="submit" class="btn btn-sm btn-primary">回答を送信する</button>
+                    <p class="btn btn-sm btn-primary checker">自動チェックボタン</p>
+                    <?= $this->Html->script('checker') ?>
                 </div>
             </form>
         </div>

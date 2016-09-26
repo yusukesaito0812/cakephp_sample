@@ -36,7 +36,6 @@ class Answers extends AbstractMigration
             'default' => null,
             'null' => true,
         ])
-        ->addForeignKey('user_id', 'users', 'id')
         ->create();
     }
     public function down()

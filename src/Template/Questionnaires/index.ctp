@@ -20,7 +20,7 @@
                 <th scope="col"><?= $this->Paginator->sort('contents') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('category') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('point_rate') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('is_show') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('is_show','表示') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created_at') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('updated_at') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>

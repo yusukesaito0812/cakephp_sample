@@ -45,7 +45,8 @@ html,body{
 #logomenu {
     width: 100%;
     box-sizing: content-box;
-    background-image: url('../img/header.png');
+    background-image: url('../img/header.jpg');
+    background-repeat: repeat-x; 
 }
 
 #logomenu > img{

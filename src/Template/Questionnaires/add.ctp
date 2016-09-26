@@ -18,7 +18,7 @@
         <table>
             <tr>
                 <th>
-                    <label for="name"><?= __('contents') ?></label>
+                    <label for="name"><?= __('Contents') ?></label>
                 </th>
                 <td>
                     <?php
@@ -43,7 +43,7 @@
             </tr>
             <tr>
                 <th>
-                    <label for="name"><?= __('contents') ?></label>
+                    <label for="name"><?= __('point_rate') ?></label>
                 </th>
                 <td>
                     <?php

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-09-16 05:30+0000\n"
+"POT-Creation-Date: 2016-09-26 11:25+0900\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,36 +14,224 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Controller/QuestionnairesController.php:55;81
+#: Controller/CategoriesController.php:55;81
+msgid "The category has been saved."
+msgstr ""
+
+#: Controller/CategoriesController.php:59;85
+msgid "The category could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CategoriesController.php:104
+msgid "The category has been deleted."
+msgstr ""
+
+#: Controller/CategoriesController.php:106
+msgid "The category could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/QuestionnairesController.php:56;89
 msgid "The questionnaire has been saved."
 msgstr ""
 
-#: Controller/QuestionnairesController.php:59;85
+#: Controller/QuestionnairesController.php:60;93
 msgid "The questionnaire could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/QuestionnairesController.php:104
+#: Controller/QuestionnairesController.php:117
 msgid "The questionnaire has been deleted."
 msgstr ""
 
-#: Controller/QuestionnairesController.php:106
+#: Controller/QuestionnairesController.php:119
 msgid "The questionnaire could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/UsersController.php:55;81
-msgid "The user has been saved."
+#: Template/Categories/add.ctp:4
+#: Template/Categories/edit.ctp:4
+#: Template/Categories/index.ctp:4
+#: Template/Categories/view.ctp:4
+#: Template/Questionnaires/add.ctp:4
+#: Template/Questionnaires/edit.ctp:4
+#: Template/Questionnaires/index.ctp:4
+#: Template/Questionnaires/view.ctp:4
+#: src/Template/Users/add.ctp:4
+#: src/Template/Users/edit.ctp:4
+#: src/Template/Users/index.ctp:4
+#: src/Template/Users/view.ctp:4
+msgid "users"
 msgstr ""
 
-#: Controller/UsersController.php:59;85
-msgid "The user could not be saved. Please, try again."
+#: Template/Categories/add.ctp:5
+#: Template/Categories/edit.ctp:5
+#: Template/Categories/index.ctp:5
+#: Template/Categories/view.ctp:5
+#: Template/Questionnaires/add.ctp:5
+#: Template/Questionnaires/edit.ctp:5
+#: Template/Questionnaires/index.ctp:5
+#: Template/Questionnaires/view.ctp:5
+#: src/Template/Users/add.ctp:5
+#: src/Template/Users/edit.ctp:5
+#: src/Template/Users/index.ctp:5
+#: src/Template/Users/view.ctp:5
+msgid "questionnaires"
 msgstr ""
 
-#: Controller/UsersController.php:104
-msgid "The user has been deleted."
+#: Template/Categories/add.ctp:6
+#: Template/Categories/edit.ctp:6
+#: Template/Categories/index.ctp:6
+#: Template/Categories/view.ctp:6
+#: Template/Questionnaires/add.ctp:6
+#: Template/Questionnaires/edit.ctp:6
+#: Template/Questionnaires/index.ctp:6
+#: Template/Questionnaires/view.ctp:6
+#: src/Template/Users/add.ctp:6
+#: src/Template/Users/edit.ctp:6
+#: src/Template/Users/index.ctp:6
+#: src/Template/Users/view.ctp:6
+msgid "categories"
 msgstr ""
 
-#: Controller/UsersController.php:106
-msgid "The user could not be deleted. Please, try again."
+#: Template/Categories/add.ctp:7
+#: Template/Categories/edit.ctp:7
+#: Template/Categories/index.ctp:7
+#: Template/Categories/view.ctp:7
+#: Template/Questionnaires/add.ctp:7
+#: Template/Questionnaires/edit.ctp:7
+#: Template/Questionnaires/index.ctp:7
+#: Template/Questionnaires/view.ctp:7
+#: src/Template/Users/add.ctp:7
+#: src/Template/Users/edit.ctp:7
+#: src/Template/Users/index.ctp:7
+#: src/Template/Users/view.ctp:7
+msgid "answers"
+msgstr ""
+
+#: Template/Categories/add.ctp:10
+#: Template/Categories/edit.ctp:10
+#: Template/Categories/index.ctp:10;24
+#: Template/Categories/view.ctp:10
+#: Template/Questionnaires/add.ctp:10
+#: Template/Questionnaires/edit.ctp:10
+#: Template/Questionnaires/index.ctp:10;26
+#: Template/Questionnaires/view.ctp:10
+#: src/Template/Users/add.ctp:10
+#: src/Template/Users/edit.ctp:10
+#: src/Template/Users/index.ctp:10;32
+#: src/Template/Users/view.ctp:10
+msgid "Actions"
+msgstr ""
+
+#: Template/Categories/add.ctp:11
+#: Template/Categories/edit.ctp:17
+#: Template/Categories/view.ctp:13
+msgid "List Categories"
+msgstr ""
+
+#: Template/Categories/add.ctp:17
+msgid "Add Category"
+msgstr ""
+
+#: Template/Categories/add.ctp:21
+#: Template/Categories/edit.ctp:27
+#: Template/Categories/view.ctp:21
+msgid "Name"
+msgstr ""
+
+#: Template/Categories/add.ctp:48
+#: Template/Categories/edit.ctp:54
+#: Template/Questionnaires/add.ctp:73
+#: Template/Questionnaires/edit.ctp:78
+#: src/Template/Users/add.ctp:38
+#: src/Template/Users/edit.ctp:38
+msgid "Submit"
+msgstr ""
+
+#: Template/Categories/edit.ctp:12
+#: Template/Categories/index.ctp:38
+#: Template/Questionnaires/edit.ctp:13
+#: Template/Questionnaires/index.ctp:42
+#: src/Template/Users/edit.ctp:12
+#: src/Template/Users/index.ctp:53
+msgid "Delete"
+msgstr ""
+
+#: Template/Categories/edit.ctp:14
+#: Template/Categories/index.ctp:38
+#: Template/Categories/view.ctp:12
+#: Template/Questionnaires/edit.ctp:13
+#: Template/Questionnaires/index.ctp:42
+#: Template/Questionnaires/view.ctp:12
+#: src/Template/Users/edit.ctp:14
+#: src/Template/Users/index.ctp:53
+#: src/Template/Users/view.ctp:12
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Categories/edit.ctp:23
+#: Template/Categories/view.ctp:11
+msgid "Edit Category"
+msgstr ""
+
+#: Template/Categories/index.ctp:11
+#: Template/Categories/view.ctp:14
+msgid "New Category"
+msgstr ""
+
+#: Template/Categories/index.ctp:15
+#: Template/Questionnaires/add.ctp:31
+#: Template/Questionnaires/edit.ctp:36
+msgid "Categories"
+msgstr ""
+
+#: Template/Categories/index.ctp:36
+#: Template/Questionnaires/index.ctp:40
+#: src/Template/Users/index.ctp:51
+msgid "View"
+msgstr ""
+
+#: Template/Categories/index.ctp:37
+#: Template/Questionnaires/index.ctp:41
+#: src/Template/Users/index.ctp:52
+msgid "Edit"
+msgstr ""
+
+#: Template/Categories/index.ctp:46
+#: Template/Questionnaires/index.ctp:50
+#: src/Template/Users/index.ctp:61
+msgid "previous"
+msgstr ""
+
+#: Template/Categories/index.ctp:48
+#: Template/Questionnaires/index.ctp:52
+#: src/Template/Users/index.ctp:63
+msgid "next"
+msgstr ""
+
+#: Template/Categories/view.ctp:12
+msgid "Delete Category"
+msgstr ""
+
+#: Template/Categories/view.ctp:25
+#: Template/Questionnaires/view.ctp:21
+#: src/Template/Users/view.ctp:21
+msgid "Id"
+msgstr ""
+
+#: Template/Categories/view.ctp:29
+#: Template/Questionnaires/add.ctp:56
+#: Template/Questionnaires/edit.ctp:61
+#: Template/Questionnaires/view.ctp:37
+msgid "is_show"
+msgstr ""
+
+#: Template/Categories/view.ctp:33
+#: Template/Questionnaires/view.ctp:41
+msgid "Created At"
+msgstr ""
+
+#: Template/Categories/view.ctp:37
+#: Template/Questionnaires/view.ctp:45
+msgid "Updated At"
 msgstr ""
 
 #: Template/Layout/error.ctp:35
@@ -54,255 +242,139 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: Template/Questionnaires/add.ctp:3
-#: Template/Questionnaires/edit.ctp:3
-#: Template/Questionnaires/index.ctp:3;17
-#: Template/Questionnaires/view.ctp:3
-#: Template/Users/add.ctp:3
-#: Template/Users/edit.ctp:3
-#: Template/Users/index.ctp:3;26
-#: Template/Users/view.ctp:3;100
-msgid "Actions"
-msgstr ""
-
-#: Template/Questionnaires/add.ctp:4
-#: Template/Questionnaires/edit.ctp:10
-#: Template/Questionnaires/view.ctp:6
+#: Template/Questionnaires/add.ctp:11
+#: Template/Questionnaires/edit.ctp:16
+#: Template/Questionnaires/view.ctp:13
 msgid "List Questionnaires"
 msgstr ""
 
-#: Template/Questionnaires/add.ctp:10
+#: Template/Questionnaires/add.ctp:17
 msgid "Add Questionnaire"
 msgstr ""
 
-#: Template/Questionnaires/add.ctp:18
-#: Template/Questionnaires/edit.ctp:24
-#: Template/Users/add.ctp:29
-#: Template/Users/edit.ctp:35
-msgid "Submit"
-msgstr ""
-
-#: Template/Questionnaires/edit.ctp:5
-#: Template/Questionnaires/index.ctp:31
-#: Template/Users/edit.ctp:5
-#: Template/Users/index.ctp:47
-#: Template/Users/view.ctp:122
-msgid "Delete"
-msgstr ""
-
-#: Template/Questionnaires/edit.ctp:7
-#: Template/Questionnaires/index.ctp:31
-#: Template/Questionnaires/view.ctp:5
-#: Template/Users/edit.ctp:7
-#: Template/Users/index.ctp:47
-#: Template/Users/view.ctp:5;122
-msgid "Are you sure you want to delete # {0}?"
-msgstr ""
-
-#: Template/Questionnaires/edit.ctp:16
-#: Template/Questionnaires/view.ctp:4
-msgid "Edit Questionnaire"
-msgstr ""
-
-#: Template/Questionnaires/index.ctp:4
-#: Template/Questionnaires/view.ctp:7
-msgid "New Questionnaire"
-msgstr ""
-
-#: Template/Questionnaires/index.ctp:8
-msgid "Questionnaires"
-msgstr ""
-
-#: Template/Questionnaires/index.ctp:29
-#: Template/Users/index.ctp:45
-#: Template/Users/view.ctp:120
-msgid "View"
-msgstr ""
-
-#: Template/Questionnaires/index.ctp:30
-#: Template/Users/index.ctp:46
-#: Template/Users/view.ctp:121
-msgid "Edit"
-msgstr ""
-
-#: Template/Questionnaires/index.ctp:39
-#: Template/Users/index.ctp:55
-msgid "previous"
-msgstr ""
-
-#: Template/Questionnaires/index.ctp:41
-#: Template/Users/index.ctp:57
-msgid "next"
-msgstr ""
-
-#: Template/Questionnaires/view.ctp:5
-msgid "Delete Questionnaire"
-msgstr ""
-
-#: Template/Questionnaires/view.ctp:14
-#: Template/Users/view.ctp:16;85
-msgid "Id"
-msgstr ""
-
-#: Template/Questionnaires/view.ctp:18
-msgid "Created At"
-msgstr ""
-
-#: Template/Questionnaires/view.ctp:22
-msgid "Updated At"
-msgstr ""
-
-#: Template/Questionnaires/view.ctp:27
-msgid "Title"
-msgstr ""
-
-#: Template/Questionnaires/view.ctp:31
+#: Template/Questionnaires/add.ctp:21
+#: Template/Questionnaires/edit.ctp:26
+#: Template/Questionnaires/view.ctp:25
 msgid "Contents"
 msgstr ""
 
-#: Template/Users/add.ctp:4
-#: Template/Users/edit.ctp:10
-#: Template/Users/view.ctp:6
+#: Template/Questionnaires/add.ctp:46
+#: Template/Questionnaires/edit.ctp:51
+#: Template/Questionnaires/view.ctp:33
+msgid "point_rate"
+msgstr ""
+
+#: Template/Questionnaires/edit.ctp:22
+#: Template/Questionnaires/view.ctp:11
+msgid "Edit Questionnaire"
+msgstr ""
+
+#: Template/Questionnaires/index.ctp:11
+#: Template/Questionnaires/view.ctp:14
+msgid "New Questionnaire"
+msgstr ""
+
+#: Template/Questionnaires/index.ctp:15
+msgid "Questionnaires"
+msgstr ""
+
+#: Template/Questionnaires/view.ctp:12
+msgid "Delete Questionnaire"
+msgstr ""
+
+#: Template/Questionnaires/view.ctp:29
+msgid "Category"
+msgstr ""
+
+#: src/Template/Users/add.ctp:11
+#: src/Template/Users/edit.ctp:17
+#: src/Template/Users/view.ctp:13
 msgid "List Users"
 msgstr ""
 
-#: Template/Users/add.ctp:5
-#: Template/Users/edit.ctp:11
-#: Template/Users/index.ctp:5
-#: Template/Users/view.ctp:8
-msgid "List Social Accounts"
-msgstr ""
-
-#: Template/Users/add.ctp:6
-#: Template/Users/edit.ctp:12
-#: Template/Users/index.ctp:6
-#: Template/Users/view.ctp:9
-msgid "New Social Account"
-msgstr ""
-
-#: Template/Users/add.ctp:12
+#: src/Template/Users/add.ctp:17
 msgid "Add User"
 msgstr ""
 
-#: Template/Users/edit.ctp:18
-#: Template/Users/view.ctp:4
+#: src/Template/Users/edit.ctp:23
+#: src/Template/Users/view.ctp:11
 msgid "Edit User"
 msgstr ""
 
-#: Template/Users/index.ctp:4
-#: Template/Users/view.ctp:7
+#: src/Template/Users/index.ctp:11
+#: src/Template/Users/view.ctp:14
 msgid "New User"
 msgstr ""
 
-#: Template/Users/index.ctp:10
+#: src/Template/Users/index.ctp:16
 msgid "Users"
 msgstr ""
 
-#: Template/Users/view.ctp:5
+#: src/Template/Users/view.ctp:12
 msgid "Delete User"
 msgstr ""
 
-#: Template/Users/view.ctp:20;88
+#: src/Template/Users/view.ctp:25
 msgid "Username"
 msgstr ""
 
-#: Template/Users/view.ctp:24
+#: src/Template/Users/view.ctp:29
 msgid "Email"
 msgstr ""
 
-#: Template/Users/view.ctp:28
-msgid "Password"
-msgstr ""
-
-#: Template/Users/view.ctp:32
+#: src/Template/Users/view.ctp:33
 msgid "First Name"
 msgstr ""
 
-#: Template/Users/view.ctp:36
+#: src/Template/Users/view.ctp:37
 msgid "Last Name"
 msgstr ""
 
-#: Template/Users/view.ctp:40;93
-msgid "Token"
+#: src/Template/Users/view.ctp:41
+msgid "Hospital"
 msgstr ""
 
-#: Template/Users/view.ctp:44
-msgid "Api Token"
+#: src/Template/Users/view.ctp:45
+msgid "Ward"
 msgstr ""
 
-#: Template/Users/view.ctp:48
+#: src/Template/Users/view.ctp:49
+msgid "Section"
+msgstr ""
+
+#: src/Template/Users/view.ctp:53
+msgid "Occupation"
+msgstr ""
+
+#: src/Template/Users/view.ctp:57
 msgid "Role"
 msgstr ""
 
-#: Template/Users/view.ctp:52;95
-msgid "Token Expires"
-msgstr ""
-
-#: Template/Users/view.ctp:56
+#: src/Template/Users/view.ctp:61
 msgid "Activation Date"
 msgstr ""
 
-#: Template/Users/view.ctp:60
-msgid "Tos Date"
-msgstr ""
-
-#: Template/Users/view.ctp:64;98
+#: src/Template/Users/view.ctp:65
 msgid "Created"
 msgstr ""
 
-#: Template/Users/view.ctp:68;99
+#: src/Template/Users/view.ctp:69
 msgid "Modified"
 msgstr ""
 
-#: Template/Users/view.ctp:72;96
+#: src/Template/Users/view.ctp:73
 msgid "Active"
 msgstr ""
 
-#: Template/Users/view.ctp:73;77
+#: src/Template/Users/view.ctp:74;78
 msgid "Yes"
 msgstr ""
 
-#: Template/Users/view.ctp:73;77
+#: src/Template/Users/view.ctp:74;78
 msgid "No"
 msgstr ""
 
-#: Template/Users/view.ctp:76
+#: src/Template/Users/view.ctp:77
 msgid "Is Superuser"
-msgstr ""
-
-#: Template/Users/view.ctp:81
-msgid "Related Social Accounts"
-msgstr ""
-
-#: Template/Users/view.ctp:86
-msgid "User Id"
-msgstr ""
-
-#: Template/Users/view.ctp:87
-msgid "Provider"
-msgstr ""
-
-#: Template/Users/view.ctp:89
-msgid "Reference"
-msgstr ""
-
-#: Template/Users/view.ctp:90
-msgid "Avatar"
-msgstr ""
-
-#: Template/Users/view.ctp:91
-msgid "Description"
-msgstr ""
-
-#: Template/Users/view.ctp:92
-msgid "Link"
-msgstr ""
-
-#: Template/Users/view.ctp:94
-msgid "Token Secret"
-msgstr ""
-
-#: Template/Users/view.ctp:97
-msgid "Data"
 msgstr ""
 

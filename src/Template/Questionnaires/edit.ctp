@@ -23,7 +23,7 @@
         <table>
             <tr>
                 <th>
-                    <label for="name"><?= __('contents') ?></label>
+                    <label for="name"><?= __('Contents') ?></label>
                 </th>
                 <td>
                     <?php

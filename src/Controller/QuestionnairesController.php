@@ -157,12 +157,12 @@ class QuestionnairesController extends AppController
         //point_listでカテゴリごとの合計点を格納
         $point_sum = 0;
         $point_list = [];
-        for($i = 0;$i < sizeof($questionnaire_list);$i++){
-            $questionnaire = TableRegistry::get('questionnaires')->get($questionnaire_list[$i + 1]);
-            $point = $answer_list[$i + 1] * $questionnaire->point_rate;
+        for($i = 1;$i < sizeof($questionnaire_list)+1;$i++){
+            $questionnaire = TableRegistry::get('questionnaires')->get($questionnaire_list[$i]);
+            $point = $answer_list[$i] * $questionnaire->point_rate;
             $point_sum += $point;
-            if($i % 10 == 0 && $i !== 0 ){
-                array_push($point_list, $point_sum);
+            if($i % 10 == 0){
+                array_push($point_list, $point_sum/10);
                 $point_sum = 0;
             }
         }
@@ -170,7 +170,7 @@ class QuestionnairesController extends AppController
         $answersTable = TableRegistry::get('answers');
         $answers = $answersTable->newEntity();
 
-        $answers->id = $loggedUserId;
+        $answers->user_id = $loggedUserId;
         $answers->questionnaires_list = serialize($questionnaire_list);
         $answers->answers_list = serialize($answer_list);
 

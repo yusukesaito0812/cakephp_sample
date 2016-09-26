@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2016-09-16 14:33+0900\n"
-"PO-Revision-Date: 2016-09-26 11:58+0900\n"
+"PO-Revision-Date: 2016-09-16 15:12+0900\n"
 "Language-Team: Ivystar <info@ivystar.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -409,6 +409,11 @@ msgstr "ユーザーID"
 msgid "Is Public"
 msgstr "公開されています"
 
+#: /views/details/admin_view.ctp:61 /views/details/view.ctp:61
+#: /views/users/groups.ctp:13;47 /views/users/search.ctp:9
+msgid "Name"
+msgstr "名前"
+
 #: /views/details/admin_view.ctp:62 /views/details/view.ctp:62
 #: /views/users/groups.ctp:48
 msgid "Description"
@@ -643,6 +648,22 @@ msgstr "パスワードをリセット"
 msgid "Search for users"
 msgstr "ユーザーを検索"
 
+#: Controller/QuestionnairesController.php:55;81
+msgid "The questionnaire has been saved."
+msgstr "設問が保存されました"
+
+#: Controller/QuestionnairesController.php:59;85
+msgid "The questionnaire could not be saved. Please, try again."
+msgstr "設問が保存されませんでした。もう一度操作してください。"
+
+#: Controller/QuestionnairesController.php:104
+msgid "The questionnaire has been deleted."
+msgstr "設問が削除されました。"
+
+#: Controller/QuestionnairesController.php:106
+msgid "The questionnaire could not be deleted. Please, try again."
+msgstr "設問が削除できませんでした。もう一度操作してください。"
+
 #: Controller/UsersController.php:55;81
 msgid "The user has been saved."
 msgstr "ユーザーが保存されました"
@@ -666,6 +687,13 @@ msgstr "エラー"
 #: Template/Layout/error.ctp:43
 msgid "Back"
 msgstr "戻る"
+
+#: Template/Questionnaires/add.ctp:3 Template/Questionnaires/edit.ctp:3
+#: Template/Questionnaires/index.ctp:3;17 Template/Questionnaires/view.ctp:3
+#: Template/Users/add.ctp:3 Template/Users/edit.ctp:3
+#: Template/Users/index.ctp:3;26 Template/Users/view.ctp:3;100
+msgid "Actions"
+msgstr "操作"
 
 #: Template/Questionnaires/add.ctp:4 Template/Questionnaires/edit.ctp:10
 #: Template/Questionnaires/view.ctp:6
@@ -782,7 +810,7 @@ msgstr "Provider"
 
 #: Template/Users/view.ctp:89
 msgid "Reference"
-msgstr "送信先"
+msgstr "Reference"
 
 #: Template/Users/view.ctp:90
 msgid "Avatar"
@@ -799,117 +827,3 @@ msgstr "Token Secret"
 #: Template/Users/view.ctp:97
 msgid "Data"
 msgstr "Data"
-
-#: Controller/CategoriesController.php:55;81
-msgid "The category has been saved."
-msgstr "カテゴリを保存しました"
-
-#: Controller/CategoriesController.php:59;85
-msgid "The category could not be saved. Please, try again."
-msgstr "カテゴリが保存されませんでした。もう一度試してください"
-
-#: Controller/CategoriesController.php:104
-msgid "The category has been deleted."
-msgstr "カテゴリが削除されました"
-
-#: Controller/CategoriesController.php:106
-msgid "The category could not be deleted. Please, try again."
-msgstr "カテゴリが削除されませんでした。もう一度試してください"
-
-#: Template/Categories/add.ctp:4 Template/Categories/edit.ctp:4
-#: Template/Categories/index.ctp:4 Template/Categories/view.ctp:4
-#: Template/Questionnaires/add.ctp:4 Template/Questionnaires/edit.ctp:4
-#: Template/Questionnaires/index.ctp:4 Template/Questionnaires/view.ctp:4
-msgid "users"
-msgstr "ユーザー"
-
-#: Template/Categories/add.ctp:5 Template/Categories/edit.ctp:5
-#: Template/Categories/index.ctp:5 Template/Categories/view.ctp:5
-#: Template/Questionnaires/add.ctp:5 Template/Questionnaires/edit.ctp:5
-#: Template/Questionnaires/index.ctp:5 Template/Questionnaires/view.ctp:5
-msgid "questionnaires"
-msgstr "設問"
-
-#: Template/Categories/add.ctp:6 Template/Categories/edit.ctp:6
-#: Template/Categories/index.ctp:6 Template/Categories/view.ctp:6
-#: Template/Questionnaires/add.ctp:6 Template/Questionnaires/edit.ctp:6
-#: Template/Questionnaires/index.ctp:6 Template/Questionnaires/view.ctp:6
-msgid "categories"
-msgstr "カテゴリ"
-
-#: Template/Categories/add.ctp:7 Template/Categories/edit.ctp:7
-#: Template/Categories/index.ctp:7 Template/Categories/view.ctp:7
-#: Template/Questionnaires/add.ctp:7 Template/Questionnaires/edit.ctp:7
-#: Template/Questionnaires/index.ctp:7 Template/Questionnaires/view.ctp:7
-msgid "answers"
-msgstr "回答"
-
-#: Template/Categories/add.ctp:10 Template/Categories/edit.ctp:10
-#: Template/Categories/index.ctp:10;24 Template/Categories/view.ctp:10
-#: Template/Questionnaires/add.ctp:10 Template/Questionnaires/edit.ctp:10
-#: Template/Questionnaires/index.ctp:10;26 Template/Questionnaires/view.ctp:10
-msgid "Actions"
-msgstr "操作"
-
-#: Template/Categories/add.ctp:11 Template/Categories/edit.ctp:17
-#: Template/Categories/view.ctp:13
-msgid "List Categories"
-msgstr "カテゴリリスト"
-
-#: Template/Categories/add.ctp:17
-msgid "Add Category"
-msgstr "カテゴリ追加"
-
-#: Template/Categories/edit.ctp:23 Template/Categories/view.ctp:11
-msgid "Edit Category"
-msgstr "カテゴリ編集"
-
-#: Template/Categories/index.ctp:11 Template/Categories/view.ctp:14
-msgid "New Category"
-msgstr "カテゴリ追加"
-
-#: Template/Categories/index.ctp:15 Template/Questionnaires/add.ctp:31
-#: Template/Questionnaires/edit.ctp:36
-msgid "Categories"
-msgstr "カテゴリ"
-
-#: Template/Categories/view.ctp:12
-msgid "Delete Category"
-msgstr "カテゴリ削除"
-
-#: Template/Categories/view.ctp:29 Template/Questionnaires/add.ctp:56
-#: Template/Questionnaires/edit.ctp:61 Template/Questionnaires/view.ctp:37
-msgid "is_show"
-msgstr "表示"
-
-#: Template/Questionnaires/edit.ctp:51 Template/Questionnaires/view.ctp:33
-msgid "point_rate"
-msgstr "得点比重"
-
-#: Template/Questionnaires/view.ctp:29
-msgid "Category"
-msgstr "カテゴリ"
-
-#: Template/Questionnaires/edit.ctp:51 Template/Questionnaires/view.ctp:33
-msgid "Point Rate"
-msgstr "得点比重"
-
-#: Template/Questionnaires/edit.ctp:51 Template/Questionnaires/view.ctp:33
-msgid "Is Show"
-msgstr "表示"
-
-#: src/Template/Users/view.ctp:41
-msgid "Hospital"
-msgstr "病院"
-
-#: src/Template/Users/view.ctp:45
-msgid "Ward"
-msgstr "病棟"
-
-#: src/Template/Users/view.ctp:49
-msgid "Section"
-msgstr "科"
-
-#: src/Template/Users/view.ctp:53
-msgid "Occupation"
-msgstr "職種"
