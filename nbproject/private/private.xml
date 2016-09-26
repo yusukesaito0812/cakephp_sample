@@ -4,19 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group/>
         <group name="real-factory-master">
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/View/Helper/UserHelper.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Model/Behavior/Behavior.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Model/Table/UsersTable.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Template/Users/add.ctp</file>
+            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Locale/_Users.pot</file>
+            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php</file>
             <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Controller/Component/UsersAuthComponent.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Model/Entity/User.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Shell/UsersShell.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/config/Seeds/UsersSeed.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Model/Behavior/SocialBehavior.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Controller/Traits/SimpleCrudTrait.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Model/Behavior/RegisterBehavior.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/config/Migrations/20150513201111_initial.php</file>
-            <file>file:/C:/Users/yusukeS/Documents/blog/web/config/Seeds/CategoriesSeed.php</file>
+            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Locale/Users.pot</file>
+            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Controller/Traits/ProfileTrait.php</file>
+            <file>file:/C:/Users/yusukeS/Documents/blog/web/src/Locale/ja/default.po</file>
+            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Locale/ja/default.po</file>
+            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Controller/Traits/UserValidationTrait.php</file>
+            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/config/users.php</file>
+            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Controller/Traits/LoginTrait.php</file>
+            <file>file:/C:/Users/yusukeS/Documents/blog/web/vendor/cakedc/users/src/Controller/Traits/RegisterTrait.php</file>
         </group>
     </open-files>
 </project-private>

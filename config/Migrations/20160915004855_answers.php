@@ -16,13 +16,11 @@ class Answers extends AbstractMigration
         $table->addColumn('user_id', 'integer', [
             'null' => false,
         ])
-        ->addColumn('questionnaires_list', 'string', [
-            'default' => '[]',
-            'null' => false,
+        ->addColumn('questionnaires_list', 'text', [
+            'null' => true,
         ])
-        ->addColumn('answers_list', 'string', [
-            'default' => '[]',
-            'null' => false,
+        ->addColumn('answers_list', 'text', [
+            'null' => true,
         ])
         ->addColumn('created_at', 'datetime', [
             'default' => null,
@@ -36,6 +34,7 @@ class Answers extends AbstractMigration
             'default' => null,
             'null' => true,
         ])
+        ->addForeignKey('user_id', 'users', 'id')
         ->create();
     }
     public function down()
