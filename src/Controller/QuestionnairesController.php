@@ -133,18 +133,25 @@ class QuestionnairesController extends AppController
     
     public function stresscheck()
     {
-
+        $this->Session = $this->request->session();
+        $this->Session->write('key', md5(uniqid().mt_rand()));
         $questionnaires = $this->Questionnaires->find('all', ['contain' => ['Categories']]);
-        
         
         $this->set(compact('questionnaires'));
         $this->set('_serialize', ['questionnaires']);
     }
     public function score(){
         //送信されたかチェック
+        $this->Session = $this->request->session();
         if(!$this->request->data()){
             return $this->redirect('/');
         }
+        //リロード対策
+        if($this->Session->read('key') !== $this->request->data('key')){
+            $this->Flash->error(__('不正なリロードが行われました'));
+            return $this->redirect('/');
+        }
+        $this -> Session-> delete('key');
         $loggedUserId = $this->Auth->user('id');
         //データ取得
         //設問リスト
@@ -157,26 +164,27 @@ class QuestionnairesController extends AppController
         //point_listでカテゴリごとの合計点を格納
         $point_sum = 0;
         $point_list = [];
+        $category_list = [];
         for($i = 1;$i < sizeof($questionnaire_list)+1;$i++){
-            $questionnaire = TableRegistry::get('questionnaires')->get($questionnaire_list[$i]);
+            $questionnaire = TableRegistry::get('questionnaires')->get($questionnaire_list[$i], ['contain' => ['Categories']]);
             $point = $answer_list[$i] * $questionnaire->point_rate;
             $point_sum += $point;
             if($i % 10 == 0){
                 array_push($point_list, $point_sum/10);
+                array_push($category_list, $questionnaire->category->name);
                 $point_sum = 0;
             }
         }
         //回答データ保存
         $answersTable = TableRegistry::get('answers');
         $answers = $answersTable->newEntity();
-
         $answers->user_id = $loggedUserId;
         $answers->questionnaires_list = serialize($questionnaire_list);
         $answers->answers_list = serialize($answer_list);
-
         $answersTable->save($answers);
         
         //画面出力
+        $this->set('category_list', $category_list);
         $this->set('point_list', $point_list);
         $this->set('questionnaire_list', $questionnaire_list);
         $this->set('answer_list', $answer_list);

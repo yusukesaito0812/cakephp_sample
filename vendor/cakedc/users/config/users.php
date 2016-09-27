@@ -115,6 +115,7 @@ $config = [
             'CakeDC/Users.Superuser',
             'CakeDC/Users.SimpleRbac',
         ],
+        'authError' => 'こちらのページにアクセスする場合、ログインが必要です。',
     ],
     'OAuth' => [
         'path' => ['plugin' => 'CakeDC/Users', 'controller' => 'Users', 'action' => 'socialLogin', 'prefix' => null],

@@ -9,7 +9,7 @@
             <canvas id="radarChart" width="600" height="400"></canvas>
                 <script>
                 var data = {
-                    labels: ["仕事の意欲", "成長の機会", "仕事のコントロール", "仕事の適性", "技能の活用度", "役割の明確さ"],
+                    labels: <?php echo "['".implode("','", h($category_list) )."']"; ?>,
                     datasets: [
                         {
                             label: "あなたの診断結果は...",

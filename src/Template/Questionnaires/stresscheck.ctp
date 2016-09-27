@@ -7,6 +7,7 @@
         </div>
         <div class="columns col-md-10 col-md-offset-1 checks">
             <form role="form" method="POST" action="/questionnaires/score">
+                <input type="hidden" name="key" value="<?php echo $this->request->session()->read('key'); ?>">
                 <table>
                 <?php $count = 1; ?>
                 <?php foreach ($questionnaires as $questionnaire): ?>
