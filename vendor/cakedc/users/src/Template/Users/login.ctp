@@ -16,9 +16,10 @@ use Cake\Core\Configure;
     <?= $this->Flash->render('auth') ?>
     <?= $this->Form->create() ?>
     <fieldset>
-        <legend><?= __d('CakeDC/Users', 'Please enter your username and password') ?></legend>
-        <?= $this->Form->input('username', ['required' => true]) ?>
-        <?= $this->Form->input('password', ['required' => true]) ?>
+        <div class="sign-up">
+        <h1 class="sign-up-title">ログイン</h1>
+        <?= $this->Form->input('username', ['required' => true, 'class' => 'sign-up-input', 'label' => false,'placeholder' => 'ユーザー名']) ?>
+        <?= $this->Form->input('password', ['required' => true, 'class' => 'sign-up-input', 'label' => false, 'placeholder' => 'パスワード']) ?>
         <?php
         if (Configure::read('Users.reCaptcha.login')) {
             echo $this->User->addReCaptcha();
@@ -27,7 +28,8 @@ use Cake\Core\Configure;
             echo $this->Form->input(Configure::read('Users.Key.Data.rememberMe'), [
                 'type' => 'checkbox',
                 'label' => __d('CakeDC/Users', 'Remember me'),
-                'checked' => 'checked'
+                'checked' => 'checked',
+                'class' => 'remember_me',
             ]);
         }
         ?>
@@ -43,8 +45,9 @@ use Cake\Core\Configure;
                 echo $this->Html->link(__d('CakeDC/Users', 'Reset Password'), ['action' => 'requestResetPassword']);
             }
             ?>
-    </fieldset>
     <?= implode(' ', $this->User->socialLoginList()); ?>
-    <?= $this->Form->button(__d('CakeDC/Users', 'Login')); ?>
+    <?= $this->Form->button(__d('CakeDC/Users', 'Login'),['class' => 'sign-up-button']); ?>
     <?= $this->Form->end() ?>
+        </div>
+    </fieldset>
 </div>

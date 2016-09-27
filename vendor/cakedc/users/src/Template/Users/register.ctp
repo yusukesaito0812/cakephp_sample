@@ -14,23 +14,123 @@ use Cake\Core\Configure;
     <?= $this->Form->create($user); ?>
     <fieldset>
         <legend><?= __d('CakeDC/Users', 'Add User') ?></legend>
-        <?php
-        echo $this->Form->input('username');
-        echo $this->Form->input('email');
-        echo $this->Form->input('password');
-        echo $this->Form->input('password_confirm', ['type' => 'password']);
-        echo $this->Form->input('first_name');
-        echo $this->Form->input('hospital');
-        echo $this->Form->input('ward');
-        echo $this->Form->input('section');
-        echo $this->Form->input('occupation');
-        if (Configure::read('Users.Tos.required')) {
-            echo $this->Form->input('tos', ['type' => 'checkbox', 'label' => __d('CakeDC/Users', 'Accept TOS conditions?'), 'required' => true]);
-        }
-        if (Configure::read('Users.reCaptcha.registration')) {
-            echo $this->User->addReCaptcha();
-        }
-        ?>
+        <table>
+            <tr>
+                <th>
+                    <label for="name"><?= __('Username') ?></label>
+                </th>
+                <td>
+                    <?php
+                    echo $this->Form->input('username', ['label' => false]);
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name"><?= __('Email') ?></label>
+                </th>
+                <td>
+                    <?php
+                    echo $this->Form->input('email', ['label' => false]);
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name"><?= __('Password') ?></label>
+                </th>
+                <td>
+                    <?php
+                    echo $this->Form->input('password', ['label' => false]);
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name"><?= __('Password (confirm)') ?></label>
+                </th>
+                <td>
+                    <?php
+                    echo $this->Form->input('password_confirm', ['type' => 'password', 'label' => false]);
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name"><?= __('First Name') ?></label>
+                </th>
+                <td>
+                    <?php
+                    echo $this->Form->input('first_name', ['label' => false]);
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name"><?= __('Last Name') ?></label>
+                </th>
+                <td>
+                    <?php
+                    echo $this->Form->input('last_name', ['label' => false]);
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name"><?= __('Hospital') ?></label>
+                </th>
+                <td>
+                    <?php
+                    echo $this->Form->input('hospital', ['label' => false]);
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name"><?= __('Ward') ?></label>
+                </th>
+                <td>
+                    <?php
+                    echo $this->Form->input('ward', ['label' => false]);
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name"><?= __('Section') ?></label>
+                </th>
+                <td>
+                    <?php
+                    echo $this->Form->input('section', ['label' => false]);
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name"><?= __('Occupation') ?></label>
+                </th>
+                <td>
+                    <?php
+                    echo $this->Form->input('occupation', ['label' => false]);
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="name">利用規約への同意</label>
+                </th>
+                <td>
+                    <?php
+                    if (Configure::read('Users.Tos.required')) {
+                        echo $this->Form->input('tos', ['type' => 'checkbox', 'label' => __d('CakeDC/Users', 'Accept TOS conditions?'), 'required' => true]);
+                    }
+                    if (Configure::read('Users.reCaptcha.registration')) {
+                        echo $this->User->addReCaptcha();
+                    }
+                    ?>
+                </td>
+            </tr>
+        </table>
     </fieldset>
     <?= $this->Form->button(__d('CakeDC/Users', 'Submit')) ?>
     <?= $this->Form->end() ?>

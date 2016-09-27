@@ -54,7 +54,15 @@
             </script>
         </div>
         
-        <div class="columns col-md-6">
+        <div class="columns col-md-5">
+            <div class="phrase">
+                <p>
+                    職場で周囲からのサポートを受けられないと感じている状態。困ったときに周囲に相談できる環境なら、ストレスがかかっても大きな負荷を抱え込まずに済む。まずは上司や先輩、同僚とのコミュニケーションを増やそう。マメに報告・相談する、ランチに行くなどしてみよう。
+                </p>
+            </div>
+            <div class="score_person">
+                <?= $this->Html->image('nurse.png',['class'=>'nurse']) ?>
+            </div>
         </div>
     </div>
 </div>

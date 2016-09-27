@@ -44,16 +44,6 @@
             </tr>
             <tr>
                 <th>
-                    <label for="name"><?= __('Password') ?></label>
-                </th>
-                <td>
-                    <?php
-            echo $this->Form->input('password', ['label' => false]);
-                    ?>
-                </td>
-            </tr>
-            <tr>
-                <th>
                     <label for="name"><?= __('First Name') ?></label>
                 </th>
                 <td>
