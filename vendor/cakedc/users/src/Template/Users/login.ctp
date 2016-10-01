@@ -12,14 +12,16 @@
 use Cake\Core\Configure;
 
 ?>
-<div class="users form">
+<div class="users form col-md-6 col-md-offset-3">
     <?= $this->Flash->render('auth') ?>
     <?= $this->Form->create() ?>
     <fieldset>
         <div class="sign-up">
         <h1 class="sign-up-title">ログイン</h1>
-        <?= $this->Form->input('username', ['required' => true, 'class' => 'sign-up-input', 'label' => false,'placeholder' => 'ユーザー名']) ?>
-        <?= $this->Form->input('password', ['required' => true, 'class' => 'sign-up-input', 'label' => false, 'placeholder' => 'パスワード']) ?>
+                    <label for="name""><?= __('Username') ?></label>
+                    <?php echo $this->Form->input('username', ['label' => false, 'class' => 'form-control', 'label' => false,'placeholder' => '']); ?>
+                    <label for="name"><?= __('Password') ?></label>
+                    <?php echo $this->Form->input('password', ['label' => false, 'class' => 'form-control', 'label' => false,'placeholder' => '','minlength' => '8']); ?>
         <?php
         if (Configure::read('Users.reCaptcha.login')) {
             echo $this->User->addReCaptcha();
@@ -46,7 +48,7 @@ use Cake\Core\Configure;
             }
             ?>
     <?= implode(' ', $this->User->socialLoginList()); ?>
-    <?= $this->Form->button(__d('CakeDC/Users', 'Login'),['class' => 'sign-up-button']); ?>
+    <?= $this->Form->button(__d('CakeDC/Users', 'Login'),['class' => 'btn btn-block btn-lg btn-primary']); ?>
     <?= $this->Form->end() ?>
         </div>
     </fieldset>
