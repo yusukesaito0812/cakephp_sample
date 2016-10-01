@@ -275,7 +275,6 @@ table > tbody + tbody {
 .sign-up {
     position: relative;
     margin: 50px auto;
-    width: 480px;
     padding: 33px 25px 29px;
     background: white;
     border-bottom: 1px solid #c4c4c4;
@@ -384,6 +383,18 @@ input {
 }
 .sign-up > .input  > label{
     line-height: 22.5px;
+}
+
+.register-form-text{
+    margin-bottom: 10px;
+}
+
+.label-required:after{
+    margin-left:10px;
+    padding: 3px;
+    content: "必須";
+    color:#fff;
+    background-color: #f96e5b;
 }
 
 /*
