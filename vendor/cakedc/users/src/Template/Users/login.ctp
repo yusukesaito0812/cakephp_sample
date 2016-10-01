@@ -12,14 +12,14 @@
 use Cake\Core\Configure;
 
 ?>
-<div class="users form">
+<div class="users form col-md-4 col-md-offset-4">
     <?= $this->Flash->render('auth') ?>
     <?= $this->Form->create() ?>
     <fieldset>
         <div class="sign-up">
         <h1 class="sign-up-title">ログイン</h1>
-        <?= $this->Form->input('username', ['required' => true, 'class' => 'sign-up-input', 'label' => false,'placeholder' => 'ユーザー名']) ?>
-        <?= $this->Form->input('password', ['required' => true, 'class' => 'sign-up-input', 'label' => false, 'placeholder' => 'パスワード']) ?>
+        <?= $this->Form->input('username', ['required' => true, 'class' => 'form-control login-form-text', 'label' => false,'placeholder' => 'ユーザー名']) ?>
+        <?= $this->Form->input('password', ['required' => true, 'class' => 'form-control login-form-text', 'label' => false, 'placeholder' => 'パスワード']) ?>
         <?php
         if (Configure::read('Users.reCaptcha.login')) {
             echo $this->User->addReCaptcha();
